@@ -74,10 +74,10 @@
 
         selectMenu.appendChild(option0);
         selectMenu.appendChild(option1);
+        selectMenu.appendChild(option5);
         selectMenu.appendChild(option2);
         selectMenu.appendChild(option3);
         selectMenu.appendChild(option4);
-        selectMenu.appendChild(option5);
 
         div1.appendChild(label1)
         div1.appendChild(selectMenu)
