@@ -1,5 +1,7 @@
 # Oliv Speed Up & Toggle Slide Preview
 
+## Preview 
+![alt text](https://github.com/siraom15/Oliv-Speed-Up/blob/main/preview.PNG?raw=true)
 
 ## Installation วิธีการติดตั้ง
 
