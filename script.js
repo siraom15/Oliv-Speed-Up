@@ -1,9 +1,8 @@
 // ==UserScript==
-// @name         move oliv slide
-// @namespace    
+// @name         Oliv-Speed-Up
 // @version      0.1
-// @description  move the oliv slide
-// @author       You
+// @description  Oliv-Speed-Up
+// @author       siraom15
 // @match        https://learning.sit.kmutt.ac.th/
 // @grant        none
 // ==/UserScript==
