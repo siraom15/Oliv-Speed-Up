@@ -220,6 +220,7 @@
             // left arrow
             // alert("<")
             let skipTimeVal = document.getElementById("setSkipTime").value
+            console.log(skipTimeVal);
             skipTime(-skipTimeVal);
 
         }
@@ -227,7 +228,8 @@
             // right arrow
             // alert(">")
             let skipTimeVal = document.getElementById("setSkipTime").value
-            skipTime(skipTimeVal);
+            console.log(skipTimeVal);
+            skipTime(-(-skipTimeVal));
         }
 
     }
