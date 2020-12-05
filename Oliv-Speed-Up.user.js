@@ -1,6 +1,6 @@
 // ==UserScript==
 // @name         Oliv-Speed-Up
-// @version      0.3
+// @version      0.4
 // @description  Oliv-Speed-Up
 // @author       siraom15
 // @match        https://learning.sit.kmutt.ac.th/
@@ -24,7 +24,6 @@
     let pe = setInterval(changeColorBar, 1000);
 
     function moveSlidePreview() {
-        // remove slide
         let x = document.querySelectorAll("vg-cuepoints");
         if (x != undefined) {
             x[0].style.marginTop = "-1%"
@@ -49,7 +48,6 @@
             div1.style.padding = "1em";
             div1.style.color = "#626262"
             div1.style.backgroundColor = "#f6f6f6"
-            // div1.style.backgroundColor = "#5B90BF"
             div1.style.width = "100%";
             div1.style.textAlign = "center";
             var btn = document.createElement('button');
@@ -59,8 +57,6 @@
             btn.style.color = "white"
             btn.style.backgroundColor = "#5B90BF"
             btn.style.border = "none"
-            // btn.style.borderWidth = "thin"
-            // btn.style.borderStyle = "solid"
             btn.style.fontSize = "1em";
             div1.appendChild(btn)
             y.parentNode.insertBefore(div1, y);
@@ -121,8 +117,6 @@
             option6.value = 16
             option6.innerHTML = "x16 Max Speed"
 
-
-
             selectMenu.appendChild(option0);
             selectMenu.appendChild(option1);
             selectMenu.appendChild(option5);
@@ -130,7 +124,6 @@
             selectMenu.appendChild(option3);
             selectMenu.appendChild(option4);
             selectMenu.appendChild(option6);
-
 
             div1.appendChild(label1)
             div1.appendChild(selectMenu)
@@ -222,8 +215,6 @@
 
     function skipTime(time) {
         let vid = document.querySelector("video");
-
-        // let currentTime = vid.currentTime;
         vid.currentTime += time;
 
     }
@@ -236,7 +227,6 @@
 
         if (e.keyCode == '37') {
             // left arrow
-            // alert("<")
             let skipTimeVal = document.getElementById("setSkipTime").value
             console.log(skipTimeVal);
             skipTime(-skipTimeVal);
@@ -244,13 +234,10 @@
         }
         else if (e.keyCode == '39') {
             // right arrow
-            // alert(">")
             let skipTimeVal = document.getElementById("setSkipTime").value
             console.log(skipTimeVal);
             skipTime(-(-skipTimeVal));
         }
-
     }
-
 
 })();
