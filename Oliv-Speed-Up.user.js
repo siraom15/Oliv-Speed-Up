@@ -1,6 +1,6 @@
 // ==UserScript==
 // @name         Oliv-Speed-Up
-// @version      0.8
+// @version      0.9
 // @description  Oliv-Speed-Up
 // @author       siraom15
 // @match        https://learning.sit.kmutt.ac.th/
@@ -12,37 +12,41 @@
 (function () {
     'use strict';
 
+    var blue_color = "#5B90BF";
+
     // test update hello world
     function changeColorBar() {
-        let x = document.getElementsByClassName("container");
-        if (x != undefined) {
-            x[0].style.backgroundColor = "#5B90BF";
-            x[0].style.height = "20%";
-            clearInterval(pe);
+        let container = document.getElementsByClassName("container");
+        if (container != undefined) {
+            container[0].style.backgroundColor = blue_color;
+            container[0].style.height = "20%";
+            clearInterval(changeColorBarInterVal);
         }
     }
-    let pe = setInterval(changeColorBar, 1000);
+    let changeColorBarInterVal = setInterval(changeColorBar, 1000);
 
     function moveSlidePreview() {
-        let x = document.querySelectorAll("vg-cuepoints");
-        if (x != undefined) {
-            x[0].style.marginTop = "-1%"
-            clearInterval(te)
+        let point = document.querySelectorAll("vg-cuepoints");
+        if (point != undefined) {
+            point[0].style.marginTop = "-1%"
+            clearInterval(moveSlidePreviewInterVal)
         }
     }
-    let te = setInterval(moveSlidePreview, 1000)
+    let moveSlidePreviewInterVal = setInterval(moveSlidePreview, 1000)
+
 
     function toggleSlidePreview() {
-        let z = document.querySelectorAll("vg-cuepoints");
-        if (z[0].style.display === "none") {
+        let point = document.querySelectorAll("vg-cuepoints");
+        if (point[0].style.display === "none") {
             z[0].style.display = "block";
         } else {
-            z[0].style.display = "none";
+            point[0].style.display = "none";
         }
     }
+
     function addBtn() {
-        let y = document.querySelector("div.video-info-container");
-        if (y != undefined) {
+        let container = document.querySelector("div.video-info-container");
+        if (container != undefined) {
             let div1 = document.createElement('div');
             div1.style.marginTop = "1em";
             div1.style.padding = "1em";
@@ -55,20 +59,20 @@
             btn.addEventListener("click", toggleSlidePreview, false);
             btn.style.textAlign = "right"
             btn.style.color = "white"
-            btn.style.backgroundColor = "#5B90BF"
+            btn.style.backgroundColor = blue_color
             btn.style.border = "none"
             btn.style.fontSize = "1em";
             div1.appendChild(btn)
-            y.parentNode.insertBefore(div1, y);
+            container.parentNode.insertBefore(div1, container);
 
-            clearInterval(re)
+            clearInterval(addBtnInterval)
         }
     }
-    let re = setInterval(addBtn, 1000)
+    let addBtnInterval = setInterval(addBtn, 1000)
 
     function addDropDownSpeed() {
-        let y = document.querySelector("div.video-info-container");
-        if (y != undefined) {
+        let container = document.querySelector("div.video-info-container");
+        if (container != undefined) {
             let div1 = document.createElement('div');
             div1.style.padding = "1em";
             div1.style.color = "#626262"
@@ -85,7 +89,7 @@
             selectMenu.id = "setSpeed"
             selectMenu.addEventListener("change", changeSpeed, false);
             selectMenu.style.color = "white"
-            selectMenu.style.backgroundColor = "#5B90BF"
+            selectMenu.style.backgroundColor = blue_color
             selectMenu.style.border = "none"
 
             let option0 = document.createElement('option');
@@ -128,16 +132,16 @@
             div1.appendChild(label1)
             div1.appendChild(selectMenu)
 
-            y.parentNode.insertBefore(div1, y);
+            container.parentNode.insertBefore(div1, container);
 
-            clearInterval(qe)
+            clearInterval(addDropDownSpeedInterval)
         }
     }
-    let qe = setInterval(addDropDownSpeed, 1000)
+    let addDropDownSpeedInterval = setInterval(addDropDownSpeed, 1000)
 
     function addSkipTime() {
-        let y = document.querySelector("div.video-info-container");
-        if (y != undefined) {
+        let container = document.querySelector("div.video-info-container");
+        if (container != undefined) {
             let div1 = document.createElement('div');
             div1.style.padding = "1em";
             div1.style.color = "#626262"
@@ -154,7 +158,7 @@
             selectMenu.id = "setSkipTime"
             selectMenu.addEventListener("change", changeSpeed, false);
             selectMenu.style.color = "white"
-            selectMenu.style.backgroundColor = "#5B90BF"
+            selectMenu.style.backgroundColor = blue_color
             selectMenu.style.border = "none"
             let option0 = document.createElement('option');
             option0.value = 1
@@ -192,8 +196,7 @@
             let small = document.createElement("small")
             small.innerHTML = "**Skip time when you press the arrow key**"
 
-           
-            
+    
             let br = document.createElement("br")
             let br1 = document.createElement("br")
 
@@ -213,26 +216,16 @@
             div1.appendChild(br)
             div1.appendChild(sm)
 
-            y.parentNode.insertBefore(div1, y);
+            container.parentNode.insertBefore(div1, container);
 
-            clearInterval(je)
+            clearInterval(addSkipTimeInterval)
         }
     }
-    let je = setInterval(addSkipTime, 1000)
+    let addSkipTimeInterval = setInterval(addSkipTime, 1000)
 
 
-    function changeSpeed() {
-        let speedRate = document.getElementById("setSpeed").value;
-        let vid = document.querySelector("video");
-        vid.playbackRate = speedRate;
-    }
 
-    function skipTime(time) {
-        let vid = document.querySelector("video");
-        vid.currentTime += time;
 
-    }
-    // skip time
     document.onkeydown = checkKey;
 
     function checkKey(e) {
@@ -264,6 +257,16 @@
         }else{
             vid.pause()
         }
+    }
+    function changeSpeed() {
+        let speedRate = document.getElementById("setSpeed").value;
+        let vid = document.querySelector("video");
+        vid.playbackRate = speedRate;
+    }
+    function skipTime(time) {
+        let vid = document.querySelector("video");
+        vid.currentTime += time;
+
     }
 
 })();
