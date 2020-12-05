@@ -7,14 +7,14 @@
 
 #### Eng
 
-1. <a href="https://chrome.google.com/webstore/detail/tampermonkey/dhdgffkkebhmkfjojejmpbldmpobfkf" target="_blank">Install Tampermonkey</a>
+1. <a href="https://chrome.google.com/webstore/detail/tampermonkey/dhdgffkkebhmkfjojejmpbldmpobfkfo" target="_blank">Install Tampermonkey</a>
 1. <a href="https://github.com/siraom15/Oliv-Speed-Up/raw/main/Oliv-Speed-Up.user.js" target="_blank">Click Here</a>
 1. Click install button on popup page
 1. finish
 
 #### TH 
 
-1. <a href="https://chrome.google.com/webstore/detail/tampermonkey/dhdgffkkebhmkfjojejmpbldmpobfkf" target="_blank">ติดตั้ง Tampermonkey</a>
+1. <a href="https://chrome.google.com/webstore/detail/tampermonkey/dhdgffkkebhmkfjojejmpbldmpobfkfo" target="_blank">ติดตั้ง Tampermonkey</a>
 1. <a href="https://github.com/siraom15/Oliv-Speed-Up/raw/main/Oliv-Speed-Up.user.js" target="_blank">กดที่นี่</a>
 1. กดปุ่ม Install ใน popup ที่เด้งขึ้นมา
 1. เสร็จสิ้น
