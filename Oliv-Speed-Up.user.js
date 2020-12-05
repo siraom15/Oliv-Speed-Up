@@ -5,8 +5,8 @@
 // @author       siraom15
 // @match        https://learning.sit.kmutt.ac.th/
 // @grant        none
-// @updateURL    https://raw.githubusercontent.com/siraom15/Oliv-Speed-Up/main/script.js
-// @downloadURL  https://raw.githubusercontent.com/siraom15/Oliv-Speed-Up/main/script.js
+// @updateURL    https://raw.githubusercontent.com/siraom15/Oliv-Speed-Up/main/Oliv-Speed-Up.user
+// @downloadURL  https://raw.githubusercontent.com/siraom15/Oliv-Speed-Up/main/Oliv-Speed-Up.user
 // ==/UserScript==
 
 (function () {
