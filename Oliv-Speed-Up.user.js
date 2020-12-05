@@ -12,7 +12,7 @@
 (function () {
     'use strict';
 
-    // test update
+    // test update hello world
     function changeColorBar() {
         let x = document.getElementsByClassName("container");
         if (x != undefined) {
