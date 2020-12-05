@@ -5,10 +5,30 @@
 
 ## Installation วิธีการติดตั้ง
 
-Clone the [script](https://github.com/siraom15/Oliv-Speed-Up/blob/main/script.js) in this repository and then Install on [Tampermonkey](https://chrome.google.com/webstore/detail/tampermonkey/dhdgffkkebhmkfjojejmpbldmpobfkfo) .
+Clone the [install.txt](https://github.com/siraom15/Oliv-Speed-Up/blob/main/install.txt) in this repository and then Install on [Tampermonkey](https://chrome.google.com/webstore/detail/tampermonkey/dhdgffkkebhmkfjojejmpbldmpobfkfo) .
 
 
-ดาวน์โหลด ไฟล์ [script](https://github.com/siraom15/Oliv-Speed-Up/blob/main/script.js) ใน repository นี้ จากนั้น ทำการติดตั้งลง script ใน [Tampermonkey](https://chrome.google.com/webstore/detail/tampermonkey/dhdgffkkebhmkfjojejmpbldmpobfkfo) .
+ดาวน์โหลด ไฟล์ [install.txt](https://github.com/siraom15/Oliv-Speed-Up/blob/main/install.txt) ใน repository นี้ จากนั้น ทำการติดตั้งลง script ใน [Tampermonkey](https://chrome.google.com/webstore/detail/tampermonkey/dhdgffkkebhmkfjojejmpbldmpobfkfo) .
+
+## Installation Script in Tampemonkey การติดตั้ง Tampermonkey
+
+1. Install [Tampermonkey](https://chrome.google.com/webstore/detail/tampermonkey/dhdgffkkebhmkfjojejmpbldmpobfkfo)
+1. Goto [Dashboard](extension://dhdgffkkebhmkfjojejmpbldmpobfkfo/options.html#url=&nav=dashboard) 
+1. Select [Utilities](extension://dhdgffkkebhmkfjojejmpbldmpobfkfo/options.html#nav=utils)  
+1. focus on File then click Import File
+1. select install.txt from download
+1. click Import
+1. Yeah!
+
+<br>
+
+1. ทำการติดตั้ง [Tampermonkey](https://chrome.google.com/webstore/detail/tampermonkey/dhdgffkkebhmkfjojejmpbldmpobfkfo)
+1. เข้าไปที่หน้า [Dashboard](extension://dhdgffkkebhmkfjojejmpbldmpobfkfo/options.html#url=&nav=dashboard) 
+1. เลือกที่ [Utilities](extension://dhdgffkkebhmkfjojejmpbldmpobfkfo/options.html#nav=utils)  
+1. เลือกหัวข้อ File จากนั้นกด Import 
+1. เลือกไฟล์ install.txt ที่ดาวน์โหลดมา
+1. กด Import
+1. เย้!
 
 
 ## Usage การใช้งาน
