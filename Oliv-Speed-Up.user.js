@@ -252,6 +252,18 @@
             console.log(skipTimeVal);
             skipTime(-(-skipTimeVal));
         }
+        else if(e.keyCode == '32'){
+            togglePlay();
+        }
+    }
+
+    function togglePlay(){
+        let vid = document.querySelector("video");
+        if(vid.paused){
+            vid.play()
+        }else{
+            vid.pause()
+        }
     }
 
 })();
