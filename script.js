@@ -81,13 +81,15 @@
 
             div1.id = "setSpeedDiv"
             let label1 = document.createElement('label');
-            label1.innerHTML = "Speed : "
+            label1.innerHTML = "Speed : &nbsp;"
 
             let selectMenu = document.createElement('select');
             selectMenu.name = "setSpeed"
             selectMenu.id = "setSpeed"
             selectMenu.addEventListener("change", changeSpeed, false);
-            selectMenu.style.color = "black"
+            selectMenu.style.color = "white"
+            selectMenu.style.backgroundColor = "#5B90BF"
+            selectMenu.style.border = "none"
 
             let option0 = document.createElement('option');
             option0.value = 0.5
@@ -143,39 +145,40 @@
 
             div1.id = "skipTime"
             let label1 = document.createElement('label');
-            label1.innerHTML = "Set Skip time : "
+            label1.innerHTML = "Set Skip time : &nbsp;"
 
             let selectMenu = document.createElement('select');
             selectMenu.name = "setSkipTime"
             selectMenu.id = "setSkipTime"
             selectMenu.addEventListener("change", changeSpeed, false);
-            selectMenu.style.color = "black"
-
+            selectMenu.style.color = "white"
+            selectMenu.style.backgroundColor = "#5B90BF"
+            selectMenu.style.border = "none"
             let option0 = document.createElement('option');
             option0.value = 1
-            option0.innerHTML = "1 วินาที"
-            option0.setAttribute('selected', 'selected');
+            option0.innerHTML = "1 sec"
 
 
             let option1 = document.createElement('option');
             option1.value = 2
-            option1.innerHTML = "2 วินาที"
+            option1.innerHTML = "2 sec"
 
             let option5 = document.createElement('option');
             option5.value = 3
-            option5.innerHTML = "3 วินาที"
+            option5.innerHTML = "3 sec"
 
             let option2 = document.createElement('option');
             option2.value = 5
-            option2.innerHTML = "5 วินาที"
+            option2.innerHTML = "5 sec"
+            option2.setAttribute('selected', 'selxected');
 
             let option3 = document.createElement('option');
             option3.value = 10
-            option3.innerHTML = "10 วินาที"
+            option3.innerHTML = "10 sec"
 
             let option4 = document.createElement('option');
             option4.value = 30
-            option4.innerHTML = "30 วินาที"
+            option4.innerHTML = "30 sec"
 
             selectMenu.appendChild(option0);
             selectMenu.appendChild(option1);
@@ -186,6 +189,12 @@
 
             div1.appendChild(label1)
             div1.appendChild(selectMenu)
+
+            let br = document.createElement("br")
+            let sm = document.createElement("small")
+            sm.innerHTML = "develop by áommie"
+            div1.appendChild(br)
+            div1.appendChild(sm)
 
             y.parentNode.insertBefore(div1, y);
 
