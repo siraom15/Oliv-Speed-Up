@@ -116,12 +116,20 @@
             option4.value = 5
             option4.innerHTML = "x5"
 
+            let option6 = document.createElement('option');
+            option6.value = 16
+            option6.innerHTML = "x16 Max Speed"
+
+
+
             selectMenu.appendChild(option0);
             selectMenu.appendChild(option1);
             selectMenu.appendChild(option5);
             selectMenu.appendChild(option2);
             selectMenu.appendChild(option3);
             selectMenu.appendChild(option4);
+            selectMenu.appendChild(option6);
+
 
             div1.appendChild(label1)
             div1.appendChild(selectMenu)
@@ -202,7 +210,7 @@
         }
     }
     let je = setInterval(addSkipTime, 1000)
-    
+
 
     function changeSpeed() {
         let speedRate = document.getElementById("setSpeed").value;
@@ -210,10 +218,10 @@
         vid.playbackRate = speedRate;
         // alert("ปรับความเร็วเป็น x " + speedRate +" แล้ว");
     }
-    
-    function skipTime(time){
+
+    function skipTime(time) {
         let vid = document.querySelector("video");
-        
+
         // let currentTime = vid.currentTime;
         vid.currentTime += time;
 
