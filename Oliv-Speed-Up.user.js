@@ -1,6 +1,6 @@
 // ==UserScript==
 // @name         Oliv-Speed-Up
-// @version      0.4
+// @version      0.5
 // @description  Oliv-Speed-Up
 // @author       siraom15
 // @match        https://learning.sit.kmutt.ac.th/
@@ -194,7 +194,12 @@
 
             let br = document.createElement("br")
             let sm = document.createElement("small")
-            sm.innerHTML = "develop by áommie"
+            let alink = document.createElement("a")
+            alink.href = "https://github.com/siraom15"
+            alink.target = "_blank"
+            alink.innerHTML = "áommie"
+            sm.innerHTML = "develop by "
+            sm.appendChild(alink)
             div1.appendChild(br)
             div1.appendChild(sm)
 
