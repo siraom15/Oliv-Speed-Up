@@ -3,13 +3,19 @@
 ## Preview 
 ![alt text](https://github.com/siraom15/Oliv-Speed-Up/blob/main/preview.PNG?raw=true)
 
-## Installation วิธีการติดตั้ง
+## New Installation วิธีการติดตั้งแบบใหม่
 
+Eng
 1. Install [Tampermonkey](https://chrome.google.com/webstore/detail/tampermonkey/dhdgffkkebhmkfjojejmpbldmpobfkfo) .
-1. [Click Here](https://github.com/siraom15/Oliv-Speed-Up/raw/main/Oliv-Speed-Up.user.js) .
+2. [Click Here](https://github.com/siraom15/Oliv-Speed-Up/raw/main/Oliv-Speed-Up.user.js) .
 
+TH 
+1. ติดตั้ง [Tampermonkey](https://chrome.google.com/webstore/detail/tampermonkey/dhdgffkkebhmkfjojejmpbldmpobfkfo) .
+2. [กดที่นี้](https://github.com/siraom15/Oliv-Speed-Up/raw/main/Oliv-Speed-Up.user.js) .
 
-OR หรือ
+<hr>
+
+## Old Installation วิธีการติดตั้งแบบเก่า
 
 Clone the [install.txt](https://github.com/siraom15/Oliv-Speed-Up/blob/main/install.txt) in this repository and then Install on [Tampermonkey](https://chrome.google.com/webstore/detail/tampermonkey/dhdgffkkebhmkfjojejmpbldmpobfkfo) .
 
@@ -36,15 +42,17 @@ Clone the [install.txt](https://github.com/siraom15/Oliv-Speed-Up/blob/main/inst
 1. กด Import
 1. เย้!
 
+<hr>
 
 ## Usage การใช้งาน
 
-This script has 2 functions 
+This script has 3 functions 
 
 - Speed Up / เร่งความเร็ววิดิโอ
 - Toggle Slide Preview / แสดงหรือซ่อนจุด slide 
-
+- Skip time when press arrow key / ข้ามเวลาตอนกด ปุ่มลุกศร
 It will appear when you visited https://learning.sit.kmutt.ac.th/ after install the script
+
 
 
 ## Contributing
