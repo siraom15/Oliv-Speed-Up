@@ -1,18 +1,18 @@
 // ==UserScript==
 // @name         Oliv-Speed-Up
-// @version      0.3
+// @version      0.2
 // @description  Oliv-Speed-Up
 // @author       siraom15
 // @match        https://learning.sit.kmutt.ac.th/
 // @grant        none
-// @updateURL    https://raw.githubusercontent.com/siraom15/Oliv-Speed-Up/main/Oliv-Speed-Up.user
-// @downloadURL  https://raw.githubusercontent.com/siraom15/Oliv-Speed-Up/main/Oliv-Speed-Up.user
+// @updateURL    https://raw.githubusercontent.com/siraom15/Oliv-Speed-Up/main/Oliv-Speed-Up.user.js
+// @downloadURL  https://raw.githubusercontent.com/siraom15/Oliv-Speed-Up/main/Oliv-Speed-Up.user.js
 // ==/UserScript==
 
 (function () {
     'use strict';
 
-    // test update hello world
+    // test update
     function changeColorBar() {
         let x = document.getElementsByClassName("container");
         if (x != undefined) {
