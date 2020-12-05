@@ -1,6 +1,6 @@
 // ==UserScript==
 // @name         Oliv-Speed-Up
-// @version      0.5
+// @version      0.6
 // @description  Oliv-Speed-Up
 // @author       siraom15
 // @match        https://learning.sit.kmutt.ac.th/
@@ -189,9 +189,12 @@
             selectMenu.appendChild(option3);
             selectMenu.appendChild(option4);
 
+            let small = document.createElement("small")
+            small.innerHTML = "**Skip time when you press the arrow key**"
+
             div1.appendChild(label1)
             div1.appendChild(selectMenu)
-
+            
             let br = document.createElement("br")
             let sm = document.createElement("small")
             let alink = document.createElement("a")
@@ -199,7 +202,10 @@
             alink.target = "_blank"
             alink.innerHTML = "áommie"
             sm.innerHTML = "develop by "
+
             sm.appendChild(alink)
+
+            div1.appendChild(small)
             div1.appendChild(br)
             div1.appendChild(sm)
 
