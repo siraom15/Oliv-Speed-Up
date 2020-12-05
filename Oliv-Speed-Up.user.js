@@ -1,6 +1,6 @@
 // ==UserScript==
 // @name         Oliv-Speed-Up
-// @version      0.6
+// @version      0.7
 // @description  Oliv-Speed-Up
 // @author       siraom15
 // @match        https://learning.sit.kmutt.ac.th/
@@ -192,11 +192,11 @@
             let small = document.createElement("small")
             small.innerHTML = "**Skip time when you press the arrow key**"
 
-            div1.appendChild(label1)
-            div1.appendChild(selectMenu)
+           
             
             let br = document.createElement("br")
             let br1 = document.createElement("br")
+
             let sm = document.createElement("small")
             let alink = document.createElement("a")
             alink.href = "https://github.com/siraom15"
@@ -206,6 +206,8 @@
 
             sm.appendChild(alink)
 
+            div1.appendChild(label1)
+            div1.appendChild(selectMenu)
             div1.appendChild(br1)
             div1.appendChild(small)
             div1.appendChild(br)
