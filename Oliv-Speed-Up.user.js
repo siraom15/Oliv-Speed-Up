@@ -196,7 +196,7 @@
             let small = document.createElement("small")
             small.innerHTML = "**Skip time when you press the arrow key**"
 
-    
+
             let br = document.createElement("br")
             let br1 = document.createElement("br")
 
@@ -245,16 +245,16 @@
             console.log(skipTimeVal);
             skipTime(-(-skipTimeVal));
         }
-        else if(e.keyCode == '32'){
+        else if (e.keyCode == '32') {
             togglePlay();
         }
     }
 
-    function togglePlay(){
+    function togglePlay() {
         let vid = document.querySelector("video");
-        if(vid.paused){
+        if (vid.paused) {
             vid.play()
-        }else{
+        } else {
             vid.pause()
         }
     }
