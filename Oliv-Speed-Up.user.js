@@ -1,6 +1,6 @@
 // ==UserScript==
 // @name         Oliv-Speed-Up
-// @version      0.2
+// @version      0.3
 // @description  Oliv-Speed-Up
 // @author       siraom15
 // @match        https://learning.sit.kmutt.ac.th/
@@ -12,7 +12,7 @@
 (function () {
     'use strict';
 
-    // test update
+    // test update hello world
     function changeColorBar() {
         let x = document.getElementsByClassName("container");
         if (x != undefined) {
