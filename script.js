@@ -14,12 +14,10 @@
     function moveSlidePreview() {
         // remove slide
         let x = document.querySelectorAll("vg-cuepoints");
-        if(x != undefined){
+        if (x != undefined) {
             x[0].style.marginTop = "-1%"
             clearInterval(te)
         }
-        
-
     }
     let te = setInterval(moveSlidePreview, 1000)
 
@@ -31,15 +29,22 @@
             z[0].style.display = "none";
         }
     }
-
     function addBtn() {
         let y = document.querySelector("div.video-info-container");
         if (y != undefined) {
+            let div1 = document.createElement('div');
+            div1.style.marginTop = "1em";
+            div1.style.padding = "1em";
+            div1.style.backgroundColor = "beige"
+            div1.style.width = "100%";
+            div1.style.textAlign = "center";
             var btn = document.createElement('button');
             btn.innerText = "Toggle Slide Preview"
             btn.addEventListener("click", toggleSlidePreview, false);
             btn.style.textAlign = "right"
-            y.parentNode.insertBefore(btn, y);
+            div1.appendChild(btn)
+            y.parentNode.insertBefore(div1, y);
+
             clearInterval(re)
         }
     }
@@ -47,6 +52,12 @@
         let y = document.querySelector("div.video-info-container");
         if (y != undefined) {
             let div1 = document.createElement('div');
+            div1.style.padding = "1em";
+            div1.style.backgroundColor = "beige"
+            div1.style.width = "100%";
+            div1.style.textAlign = "center";
+
+            div1.id = "setSpeedDiv"
             let label1 = document.createElement('label');
             label1.innerHTML = "Speed : "
 
