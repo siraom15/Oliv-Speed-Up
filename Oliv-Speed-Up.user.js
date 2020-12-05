@@ -196,6 +196,7 @@
             div1.appendChild(selectMenu)
             
             let br = document.createElement("br")
+            let br1 = document.createElement("br")
             let sm = document.createElement("small")
             let alink = document.createElement("a")
             alink.href = "https://github.com/siraom15"
@@ -205,7 +206,7 @@
 
             sm.appendChild(alink)
 
-            div1.appendChild(br)
+            div1.appendChild(br1)
             div1.appendChild(small)
             div1.appendChild(br)
             div1.appendChild(sm)
