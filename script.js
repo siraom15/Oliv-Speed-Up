@@ -12,15 +12,15 @@
 (function () {
     'use strict';
 
-    function changeColorBar(){
+    function changeColorBar() {
         let x = document.getElementsByClassName("container");
-        if(x != undefined){
+        if (x != undefined) {
             x[0].style.backgroundColor = "#5B90BF";
-            x[0].style.height = "10%";
+            x[0].style.height = "20%";
             clearInterval(pe);
         }
     }
-    let pe = setInterval(changeColorBar,1000);
+    let pe = setInterval(changeColorBar, 1000);
 
     function moveSlidePreview() {
         // remove slide
@@ -67,6 +67,8 @@
             clearInterval(re)
         }
     }
+    let re = setInterval(addBtn, 1000)
+
     function addDropDownSpeed() {
         let y = document.querySelector("div.video-info-container");
         if (y != undefined) {
@@ -127,6 +129,7 @@
             clearInterval(qe)
         }
     }
+    let qe = setInterval(addDropDownSpeed, 1000)
 
     function changeSpeed() {
         let speedRate = document.getElementById("setSpeed").value;
@@ -134,9 +137,34 @@
         vid.playbackRate = speedRate;
         // alert("ปรับความเร็วเป็น x " + speedRate +" แล้ว");
     }
-    let re = setInterval(addBtn, 1000)
-    let qe = setInterval(addDropDownSpeed, 1000)
+    
+    function skipTime(time){
+        let vid = document.querySelector("video");
+        
+        // let currentTime = vid.currentTime;
+        vid.currentTime += time;
 
+    }
+    // skip time
+    document.onkeydown = checkKey;
+
+    function checkKey(e) {
+
+        e = e || window.event;
+
+        if (e.keyCode == '37') {
+            // left arrow
+            // alert("<")
+            skipTime(-5);
+
+        }
+        else if (e.keyCode == '39') {
+            // right arrow
+            // alert(">")
+            skipTime(5);
+        }
+
+    }
 
 
 })();
