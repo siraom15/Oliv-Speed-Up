@@ -11,6 +11,17 @@
 
 (function () {
     'use strict';
+
+    function changeColorBar(){
+        let x = document.getElementsByClassName("container");
+        if(x != undefined){
+            x[0].style.backgroundColor = "#5B90BF";
+            x[0].style.height = "10%";
+            clearInterval(pe);
+        }
+    }
+    let pe = setInterval(changeColorBar,1000);
+
     function moveSlidePreview() {
         // remove slide
         let x = document.querySelectorAll("vg-cuepoints");
@@ -35,13 +46,21 @@
             let div1 = document.createElement('div');
             div1.style.marginTop = "1em";
             div1.style.padding = "1em";
-            div1.style.backgroundColor = "beige"
+            div1.style.color = "#626262"
+            div1.style.backgroundColor = "#f6f6f6"
+            // div1.style.backgroundColor = "#5B90BF"
             div1.style.width = "100%";
             div1.style.textAlign = "center";
             var btn = document.createElement('button');
             btn.innerText = "Toggle Slide Preview"
             btn.addEventListener("click", toggleSlidePreview, false);
             btn.style.textAlign = "right"
+            btn.style.color = "white"
+            btn.style.backgroundColor = "#5B90BF"
+            btn.style.border = "none"
+            // btn.style.borderWidth = "thin"
+            // btn.style.borderStyle = "solid"
+            btn.style.fontSize = "1em";
             div1.appendChild(btn)
             y.parentNode.insertBefore(div1, y);
 
@@ -53,7 +72,8 @@
         if (y != undefined) {
             let div1 = document.createElement('div');
             div1.style.padding = "1em";
-            div1.style.backgroundColor = "beige"
+            div1.style.color = "#626262"
+            div1.style.backgroundColor = "#f6f6f6"
             div1.style.width = "100%";
             div1.style.textAlign = "center";
 
@@ -65,7 +85,7 @@
             selectMenu.name = "setSpeed"
             selectMenu.id = "setSpeed"
             selectMenu.addEventListener("change", changeSpeed, false);
-
+            selectMenu.style.color = "black"
 
             let option0 = document.createElement('option');
             option0.value = 0.5
