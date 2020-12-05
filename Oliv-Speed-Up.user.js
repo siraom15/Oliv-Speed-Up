@@ -205,6 +205,7 @@
 
             sm.appendChild(alink)
 
+            div1.appendChild(br)
             div1.appendChild(small)
             div1.appendChild(br)
             div1.appendChild(sm)
@@ -221,7 +222,6 @@
         let speedRate = document.getElementById("setSpeed").value;
         let vid = document.querySelector("video");
         vid.playbackRate = speedRate;
-        // alert("ปรับความเร็วเป็น x " + speedRate +" แล้ว");
     }
 
     function skipTime(time) {
