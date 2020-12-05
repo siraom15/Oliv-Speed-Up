@@ -131,6 +131,70 @@
     }
     let qe = setInterval(addDropDownSpeed, 1000)
 
+    function addSkipTime() {
+        let y = document.querySelector("div.video-info-container");
+        if (y != undefined) {
+            let div1 = document.createElement('div');
+            div1.style.padding = "1em";
+            div1.style.color = "#626262"
+            div1.style.backgroundColor = "#f6f6f6"
+            div1.style.width = "100%";
+            div1.style.textAlign = "center";
+
+            div1.id = "skipTime"
+            let label1 = document.createElement('label');
+            label1.innerHTML = "Set Skip time : "
+
+            let selectMenu = document.createElement('select');
+            selectMenu.name = "setSkipTime"
+            selectMenu.id = "setSkipTime"
+            selectMenu.addEventListener("change", changeSpeed, false);
+            selectMenu.style.color = "black"
+
+            let option0 = document.createElement('option');
+            option0.value = 1
+            option0.innerHTML = "1 วินาที"
+            option0.setAttribute('selected', 'selected');
+
+
+            let option1 = document.createElement('option');
+            option1.value = 2
+            option1.innerHTML = "2 วินาที"
+
+            let option5 = document.createElement('option');
+            option5.value = 3
+            option5.innerHTML = "3 วินาที"
+
+            let option2 = document.createElement('option');
+            option2.value = 5
+            option2.innerHTML = "5 วินาที"
+
+            let option3 = document.createElement('option');
+            option3.value = 10
+            option3.innerHTML = "10 วินาที"
+
+            let option4 = document.createElement('option');
+            option4.value = 30
+            option4.innerHTML = "30 วินาที"
+
+            selectMenu.appendChild(option0);
+            selectMenu.appendChild(option1);
+            selectMenu.appendChild(option5);
+            selectMenu.appendChild(option2);
+            selectMenu.appendChild(option3);
+            selectMenu.appendChild(option4);
+
+            div1.appendChild(label1)
+            div1.appendChild(selectMenu)
+
+            y.parentNode.insertBefore(div1, y);
+
+            clearInterval(je)
+        }
+    }
+    let je = setInterval(addSkipTime, 1000)
+    
+
     function changeSpeed() {
         let speedRate = document.getElementById("setSpeed").value;
         let vid = document.querySelector("video");
@@ -155,13 +219,15 @@
         if (e.keyCode == '37') {
             // left arrow
             // alert("<")
-            skipTime(-5);
+            let skipTimeVal = document.getElementById("setSkipTime").value
+            skipTime(-skipTimeVal);
 
         }
         else if (e.keyCode == '39') {
             // right arrow
             // alert(">")
-            skipTime(5);
+            let skipTimeVal = document.getElementById("setSkipTime").value
+            skipTime(skipTimeVal);
         }
 
     }
