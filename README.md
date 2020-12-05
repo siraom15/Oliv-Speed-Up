@@ -14,6 +14,15 @@ TH
 2. [กดที่นี้](https://github.com/siraom15/Oliv-Speed-Up/raw/main/Oliv-Speed-Up.user.js) .
 
 <hr>
+## Update วิธีการอัปเดต
+
+Eng
+1. [Click Here](https://github.com/siraom15/Oliv-Speed-Up/raw/main/Oliv-Speed-Up.user.js) .
+
+TH 
+1. [กดที่นี้](https://github.com/siraom15/Oliv-Speed-Up/raw/main/Oliv-Speed-Up.user.js) .
+
+<hr>
 
 ## Old Installation วิธีการติดตั้งแบบเก่า
 
