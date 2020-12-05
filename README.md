@@ -5,6 +5,12 @@
 
 ## Installation วิธีการติดตั้ง
 
+1. Install [Tampermonkey](https://chrome.google.com/webstore/detail/tampermonkey/dhdgffkkebhmkfjojejmpbldmpobfkfo) .
+1. [Click Here](https://github.com/siraom15/Oliv-Speed-Up/raw/main/Oliv-Speed-Up.user.js) .
+
+
+OR หรือ
+
 Clone the [install.txt](https://github.com/siraom15/Oliv-Speed-Up/blob/main/install.txt) in this repository and then Install on [Tampermonkey](https://chrome.google.com/webstore/detail/tampermonkey/dhdgffkkebhmkfjojejmpbldmpobfkfo) .
 
 
