@@ -1,6 +1,6 @@
 // ==UserScript==
 // @name         Oliv-Speed-Up
-// @version      0.9
+// @version      1.0
 // @description  Oliv-Speed-Up
 // @author       siraom15
 // @match        https://learning.sit.kmutt.ac.th/
@@ -38,7 +38,7 @@
     function toggleSlidePreview() {
         let point = document.querySelectorAll("vg-cuepoints");
         if (point[0].style.display === "none") {
-            z[0].style.display = "block";
+            point[0].style.display = "block";
         } else {
             point[0].style.display = "none";
         }
