@@ -266,7 +266,7 @@
     function skipTime(time) {
         let vid = document.querySelector("video");
         vid.currentTime += time;
-
+        vid.play()
     }
 
 })();
