@@ -1,6 +1,6 @@
 // ==UserScript==
 // @name         Oliv-Speed-Up
-// @version      1.1
+// @version      1.2
 // @description  Oliv-Speed-Up
 // @author       siraom15
 // @match        https://learning.sit.kmutt.ac.th/
@@ -39,8 +39,11 @@
         let point = document.querySelectorAll("vg-cuepoints");
         if (point[0].style.display === "none") {
             point[0].style.display = "block";
+            toastBox("Show Slide Preview");
         } else {
             point[0].style.display = "none";
+            toastBox("Hidden Slide Preview");
+
         }
     }
 
@@ -156,7 +159,7 @@
             let selectMenu = document.createElement('select');
             selectMenu.name = "setSkipTime"
             selectMenu.id = "setSkipTime"
-            selectMenu.addEventListener("change", changeSpeed, false);
+            selectMenu.addEventListener("change", changeSkipTime, false);
             selectMenu.style.color = "white"
             selectMenu.style.backgroundColor = blue_color
             selectMenu.style.border = "none"
@@ -223,8 +226,24 @@
     }
     let addSkipTimeInterval = setInterval(addSkipTime, 1000)
 
+    function changeSkipTime(){
+        let skipTime = document.getElementById("setSkipTime").value;
+        toastBox("Changed Skip time to : " + skipTime + " sec");
+    }
 
+    function toastBox(text) {
+        let container = document.querySelector("div.video-info-container");
+        if (container != undefined) {
+            let div = document.createElement("div")
+            div.setAttribute("style", "color: black;color: white;left: 50%;background-color: rgb(91, 144, 191);position: absolute;top: 0;padding: 2em;box-shadow: 0.1em 0.1em beige;left: 50%;margin-right: -50%;transform: translate(-50%, -50%);");
+            div.innerHTML = text;
+            container.parentNode.insertBefore(div, container);
+            setTimeout(() => {
+                div.remove()
+            }, 1000)
 
+        }
+    }
 
     document.onkeydown = checkKey;
 
@@ -262,12 +281,15 @@
         let speedRate = document.getElementById("setSpeed").value;
         let vid = document.querySelector("video");
         vid.playbackRate = speedRate;
+        toastBox("changed speed to x" + speedRate);
     }
     function skipTime(time) {
         let vid = document.querySelector("video");
         vid.play()
         vid.currentTime += time;
-        
+
     }
+
+
 
 })();
