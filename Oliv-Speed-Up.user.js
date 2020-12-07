@@ -1,6 +1,6 @@
 // ==UserScript==
 // @name         Oliv-Speed-Up
-// @version      1.2
+// @version      1.3
 // @description  Oliv-Speed-Up
 // @author       siraom15
 // @match        https://learning.sit.kmutt.ac.th/
@@ -202,6 +202,7 @@
 
             let br = document.createElement("br")
             let br1 = document.createElement("br")
+            let hr = document.createElement("hr");
 
             let sm = document.createElement("small")
             let alink = document.createElement("a")
@@ -212,12 +213,24 @@
 
             sm.appendChild(alink)
 
+            
+            let sm2 = document.createElement("small")
+            let alink2 = document.createElement("a")
+            alink2.href = "https://github.com/siraom15/Oliv-Speed-Up/raw/main/Oliv-Speed-Up.user.js"
+            alink2.target = "_blank"
+            alink2.innerHTML = " here"
+            sm2.innerHTML = "Check for update "
+
+            sm2.appendChild(alink2)
+
             div1.appendChild(label1)
             div1.appendChild(selectMenu)
             div1.appendChild(br1)
             div1.appendChild(small)
-            div1.appendChild(br)
+            div1.appendChild(hr)
             div1.appendChild(sm)
+            div1.appendChild(br)
+            div1.appendChild(sm2)
 
             container.parentNode.insertBefore(div1, container);
 
