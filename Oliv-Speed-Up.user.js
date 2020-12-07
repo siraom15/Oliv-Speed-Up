@@ -1,6 +1,6 @@
 // ==UserScript==
 // @name         Oliv-Speed-Up
-// @version      1.01
+// @version      1.1
 // @description  Oliv-Speed-Up
 // @author       siraom15
 // @match        https://learning.sit.kmutt.ac.th/
@@ -265,8 +265,9 @@
     }
     function skipTime(time) {
         let vid = document.querySelector("video");
-        vid.currentTime += time;
         vid.play()
+        vid.currentTime += time;
+        
     }
 
 })();
