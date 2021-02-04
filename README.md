@@ -3,6 +3,17 @@
 ## Preview 
 ![alt text](https://github.com/siraom15/Oliv-Speed-Up/blob/main/preview.PNG?raw=true)
 
+## Usage การใช้งาน
+
+This script has 3 functions 
+
+- Speed Up / เร่งความเร็ววิดิโอ
+- Toggle Slide Preview / แสดงหรือซ่อนจุด slide 
+- Skip time when press arrow key / ข้ามเวลาตอนกด ปุ่มลุกศร
+
+It will appear when you visited https://learning.sit.kmutt.ac.th/ after install the script
+ฟังก์ชันต่างๆจะแสดงผลในเว็บ https://learning.sit.kmutt.ac.th/  หลังจากติดตั้งเสร็จ
+
 ## New Installation วิธีการติดตั้งแบบใหม่
 
 #### Eng
@@ -64,16 +75,7 @@ Clone the [install.txt](https://github.com/siraom15/Oliv-Speed-Up/blob/main/inst
 
 <hr>
 
-## Usage การใช้งาน
 
-This script has 3 functions 
-
-- Speed Up / เร่งความเร็ววิดิโอ
-- Toggle Slide Preview / แสดงหรือซ่อนจุด slide 
-- Skip time when press arrow key / ข้ามเวลาตอนกด ปุ่มลุกศร
-
-It will appear when you visited https://learning.sit.kmutt.ac.th/ after install the script
-ฟังก์ชันต่างๆจะแสดงผลในเว็บ https://learning.sit.kmutt.ac.th/  หลังจากติดตั้งเสร็จ
 
 
 ## Contributing
