@@ -9,7 +9,7 @@ This script has 3 functions
 
 - Speed Up / เร่งความเร็ววิดิโอ
 - Toggle Slide Preview / แสดงหรือซ่อนจุด slide 
-- Skip time when press arrow key / ข้ามเวลาตอนกด ปุ่มลุกศร
+- Skip time when press arrow key / ข้ามเวลาตอนกด ปุ่มลุกศร < >
 
 ฟังก์ชันต่างๆจะแสดงผลในเว็บ https://learning.sit.kmutt.ac.th/  หลังจากติดตั้งเสร็จ หากไม่พบกรุณารีเฟรชหน้าเว็บอีกครั้ง
 
@@ -30,23 +30,6 @@ It will appear when you visit https://learning.sit.kmutt.ac.th/ after install th
 1. <a href="https://chrome.google.com/webstore/detail/tampermonkey/dhdgffkkebhmkfjojejmpbldmpobfkfo" target="_blank">Install Tampermonkey</a>
 1. <a href="https://github.com/siraom15/Oliv-Speed-Up/raw/main/Oliv-Speed-Up.user.js" target="_blank">Click Here</a>
 1. Click install button on popup page
-1. finish
-
-
-<hr>
-
-## Update วิธีการอัปเดต
-
-
-#### TH 
-1. <a href="https://github.com/siraom15/Oliv-Speed-Up/raw/main/Oliv-Speed-Up.user.js" target="_blank">กดที่นี่</a>
-1. กดปุ่ม Update
-1. เสร็จสิ้น
-
-
-#### Eng
-1. <a href="https://github.com/siraom15/Oliv-Speed-Up/raw/main/Oliv-Speed-Up.user.js" target="_blank">Click Here</a>
-1. Click Update Button
 1. finish
 
 <hr>
