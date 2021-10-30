@@ -1,6 +1,6 @@
 // ==UserScript==
 // @name         Oliv-Speed-Up
-// @version      1.5
+// @version      1.5.1
 // @description  Oliv-Speed-Up
 // @author       siraom15
 // @match        https://learning.sit.kmutt.ac.th/
@@ -29,6 +29,7 @@
                 el.setAttribute(key, attributes[key]);
             }
         }
+        return el;
     }
 
     function appendManyChilds(parent, ...childs) {
