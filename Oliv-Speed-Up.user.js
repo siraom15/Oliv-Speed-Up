@@ -1,6 +1,6 @@
 // ==UserScript==
 // @name         Oliv-Speed-Up
-// @version      1.4
+// @version      1.5
 // @description  Oliv-Speed-Up
 // @author       siraom15
 // @match        https://learning.sit.kmutt.ac.th/
