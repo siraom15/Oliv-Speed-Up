@@ -201,7 +201,7 @@
             // option3.value = 2
             // option3.innerHTML = "x2"
 
-            let option4 = createEl('option', {
+            let option5 = createEl('option', {
                 value: 5,
                 innerText: "x5",
             });
@@ -209,7 +209,7 @@
             // option4.value = 5
             // option4.innerHTML = "x5"
 
-            let option5 = createEl('option', {
+            let option6 = createEl('option', {
                 value: 16,
                 innerText: "x16",
             });
@@ -218,7 +218,7 @@
             // option6.innerHTML = "x16 Max Speed"
 
 
-            let options = [option0, option1, option2, option3, option4, option5];
+            let options = [option0, option1, option2, option3, option4, option5,option6];
             appendManyChilds(selectMenu, ...options)
             // selectMenu.appendChild(option0);
             // selectMenu.appendChild(option1);
@@ -418,7 +418,8 @@
                 left: 50%;
                 margin-right: -50%;
                 transform: translate(-50%, -50%);
-                `
+                `,
+                innerText : text
             })
             // let div = document.createElement("div")
             // div.setAttribute("style", "color: black;color: white;left: 50%;background-color: rgb(91, 144, 191);position: absolute;top: 0;padding: 2em;box-shadow: 0.1em 0.1em beige;left: 50%;margin-right: -50%;transform: translate(-50%, -50%);");
