@@ -1,6 +1,6 @@
 // ==UserScript==
 // @name         Oliv-Speed-Up
-// @version      1.8
+// @version      1.9
 // @description  Oliv-Speed-Up
 // @author       siraom15
 // @match        https://learning.sit.kmutt.ac.th/
@@ -89,7 +89,7 @@
                 border : none;
                 font-size : 1em;
                 `,
-                onclick: toggleSlidePreview
+                onclick: toggleSlidePreview()
             });
 
             appendManyChilds(div1, btn);
@@ -120,7 +120,7 @@
             let selectMenu = createEl('select', {
                 name: "setSpeed",
                 id: "setSpeed",
-                onchange: changeSpeed,
+                onchange: changeSpeed(),
                 style: `
                 color : ${colors.white};
                 background-color : ${colors.blue};
@@ -191,13 +191,13 @@
             });
             
             let label1 = createEl('label', {
-                innerText : 'Set Skip time : &nbsp;'
+                innerText : 'Set Skip time : '
             });
 
             let selectMenu = createEl('select', {
                 name: "setSkipTime",
                 id: "setSkipTime",
-                onchange: changeSkipTime,
+                onchange: changeSkipTime(),
                 style: `
                 color : ${colors.white};
                 background-color : ${colors.blue};
@@ -256,13 +256,13 @@
                 innerText: "aommie"
             });
             
-            appendManyChilds(small2, alink)
+            appendManyChilds(small2, alink);
 
-            appendManyChilds(div1, label1, selectMenu, br, small1, hr,small2)
+            appendManyChilds(div1, label1, selectMenu, br, small1, hr,small2);
 
             container.parentNode.insertBefore(div1, container);
 
-            clearInterval(addSkipTimeInterval)
+            clearInterval(addSkipTimeInterval);
         }
     }
     let addSkipTimeInterval = setInterval(addSkipTime, 1000)
@@ -296,7 +296,7 @@
             container.parentNode.insertBefore(div, container);
 
             setTimeout(() => {
-                document.getElementById('toastBox').remove()
+                document.getElementById('toastBox').remove();
             }, 1000)
 
         }
@@ -310,14 +310,14 @@
 
         if (e.keyCode == '37') {
             // left arrow
-            let skipTimeVal = document.getElementById("setSkipTime").value
+            let skipTimeVal = document.getElementById("setSkipTime").value;
             console.log(skipTimeVal);
             skipTime(-skipTimeVal);
 
         }
         else if (e.keyCode == '39') {
             // right arrow
-            let skipTimeVal = document.getElementById("setSkipTime").value
+            let skipTimeVal = document.getElementById("setSkipTime").value;
             console.log(skipTimeVal);
             skipTime(-(-skipTimeVal));
         }
@@ -330,9 +330,9 @@
     function togglePlay() {
         let vid = document.querySelector("video");
         if (vid.paused) {
-            vid.play()
+            vid.play();
         } else {
-            vid.pause()
+            vid.pause();
         }
     }
     function changeSpeed() {
@@ -343,7 +343,7 @@
     }
     function skipTime(time) {
         let vid = document.querySelector("video");
-        vid.play()
+        vid.play();
         vid.currentTime += time;
     }
 })();
