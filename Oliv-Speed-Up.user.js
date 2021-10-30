@@ -1,6 +1,6 @@
 // ==UserScript==
 // @name         Oliv-Speed-Up
-// @version      1.7
+// @version      1.8
 // @description  Oliv-Speed-Up
 // @author       siraom15
 // @match        https://learning.sit.kmutt.ac.th/
@@ -114,7 +114,7 @@
             });
             
             let label1 = createEl("label", {
-                innerText: "Speed : &nbsp;"
+                innerText: "Speed : "
             });
 
             let selectMenu = createEl('select', {
@@ -256,7 +256,7 @@
                 innerText: "aommie"
             });
             
-            appendManyChilds(sm, alink)
+            appendManyChilds(small2, alink)
 
             appendManyChilds(div1, label1, selectMenu, br, small1, hr,small2)
 
