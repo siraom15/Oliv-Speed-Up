@@ -5,10 +5,10 @@
 
 ## Usage การใช้งาน
 
-This script has 3 functions 
+This script has 3 functions
 
 - Speed Up / เร่งความเร็ววิดิโอ
-- Toggle Slide Preview / แสดงหรือซ่อนจุด slide 
+- Toggle Slide Preview / แสดงหรือซ่อนจุด slide
 - Skip time when press arrow key / ข้ามเวลาตอนกด ปุ่มลุกศร < >
 
 ฟังก์ชันต่างๆจะแสดงผลในเว็บ https://learning.sit.kmutt.ac.th/  หลังจากติดตั้งเสร็จ หากไม่พบกรุณารีเฟรชหน้าเว็บอีกครั้ง
