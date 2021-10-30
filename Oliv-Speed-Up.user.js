@@ -38,7 +38,7 @@
     function changeColorBar() {
         let container = document.getElementsByClassName("container");
         if (container != undefined) {
-            container[0].style.backgroundColor = blue;
+            container[0].style.backgroundColor = colors.blue;
             container[0].style.height = "20%";
             clearInterval(changeColorBarInterVal);
         }
@@ -95,7 +95,7 @@
                 border : none;
                 font-size : 1em;
                 `,
-                onclick: `toggleSlidePreview()`
+                onclick: toggleSlidePreview
             })
 
             // var btn = document.createElement('button');

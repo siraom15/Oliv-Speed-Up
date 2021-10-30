@@ -21,7 +21,7 @@ It will appear when you visit https://learning.sit.kmutt.ac.th/ after install th
 #### TH 
 
 1. <a href="https://chrome.google.com/webstore/detail/tampermonkey/dhdgffkkebhmkfjojejmpbldmpobfkfo" target="_blank">ติดตั้ง Tampermonkey</a>
-1. <a href="https://github.com/siraom15/Oliv-Speed-Up/raw/main/Oliv-Speed-Up.user.js" target="_blank">กดที่นี่</a>
+1. <a href="https://github.com/siraom15/Oliv-Speed-Up/raw/refactor/Oliv-Speed-Up.user.js" target="_blank">กดที่นี่</a>
 1. กดปุ่ม Install ใน popup ที่เด้งขึ้นมา
 1. เสร็จสิ้น
 
