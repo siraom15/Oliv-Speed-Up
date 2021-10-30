@@ -1,6 +1,6 @@
 // ==UserScript==
 // @name         Oliv-Speed-Up
-// @version      1.9
+// @version      2.0
 // @description  Oliv-Speed-Up
 // @author       siraom15
 // @match        https://learning.sit.kmutt.ac.th/
@@ -17,10 +17,10 @@
         gray: "#626262",
         whiteGray: "#f6f6f6",
         white: "white",
-        black : "black"
+        black: "black"
     };
 
-    function createEl(elName, attributes) {
+    function createEl(elName, attributes, eventListen) {
         let el = document.createElement(elName);
         for (const key in attributes) {
             if (key == 'innerText') {
@@ -28,6 +28,9 @@
             } else {
                 el.setAttribute(key, attributes[key]);
             }
+        }
+        if (eventListen) {
+            el.addEventListener(eventListen.on, eventListen.function, false);
         }
         return el;
     }
@@ -63,7 +66,7 @@
             toastBox("Show Slide Preview");
         } else {
             point[0].style.display = "none";
-            toastBox("Hidden Slide Preview");
+            toastBox("Hide Slide Preview");
 
         }
     }
@@ -89,7 +92,10 @@
                 border : none;
                 font-size : 1em;
                 `,
-                onclick: toggleSlidePreview()
+                innerText: "Toggle Slide Preview"
+            }, {
+                on: "click",
+                function: toggleSlidePreview
             });
 
             appendManyChilds(div1, btn);
@@ -112,7 +118,7 @@
                 `,
                 id: "setSpeedDiv",
             });
-            
+
             let label1 = createEl("label", {
                 innerText: "Speed : "
             });
@@ -120,40 +126,42 @@
             let selectMenu = createEl('select', {
                 name: "setSpeed",
                 id: "setSpeed",
-                onchange: changeSpeed(),
                 style: `
                 color : ${colors.white};
                 background-color : ${colors.blue};
                 border : none;
                 `,
+            },{
+                on:"change",
+                function : changeSpeed
             });
-           
+
             let option0 = createEl('option', {
                 value: 0.5,
                 innerText: "x0.5"
             });
-           
+
             let option1 = createEl('option', {
                 value: 1,
                 innerText: "x1",
                 selected: 'selected'
             });
-            
+
             let option2 = createEl('option', {
                 value: 1.25,
                 innerText: "x1.25",
             });
-           
+
             let option3 = createEl('option', {
                 value: 1.5,
                 innerText: "x1.5",
             });
-           
+
             let option4 = createEl('option', {
                 value: 2,
                 innerText: "x2",
             });
-           
+
             let option5 = createEl('option', {
                 value: 5,
                 innerText: "x5",
@@ -164,13 +172,13 @@
                 innerText: "x16",
             });
 
-            let options = [option0, option1, option2, option3, option4, option5,option6];
+            let options = [option0, option1, option2, option3, option4, option5, option6];
             appendManyChilds(selectMenu, ...options);
-            
+
             appendManyChilds(div1, label1, selectMenu);
-            
+
             container.parentNode.insertBefore(div1, container);
-            
+
             clearInterval(addDropDownSpeedInterval);
         }
     }
@@ -189,43 +197,45 @@
                 `,
                 id: "skipTime"
             });
-            
+
             let label1 = createEl('label', {
-                innerText : 'Set Skip time : '
+                innerText: 'Set Skip time : '
             });
 
             let selectMenu = createEl('select', {
                 name: "setSkipTime",
                 id: "setSkipTime",
-                onchange: changeSkipTime(),
                 style: `
                 color : ${colors.white};
                 background-color : ${colors.blue};
                 border : none;
                 `,
+            },{
+                on : "change",
+                function : changeSkipTime
             });
-           
+
             let option0 = createEl('option', {
                 value: 1,
                 innerText: "1 sec"
             });
-          
+
             let option1 = createEl('option', {
                 value: 2,
                 innerText: "2 sec"
             });
-           
+
             let option2 = createEl('option', {
                 value: 3,
                 innerText: "3 sec"
             });
-           
+
             let option3 = createEl('option', {
                 value: 5,
                 innerText: "5 sec",
                 selected: 'selected'
             });
-           
+
             let option4 = createEl('option', {
                 value: 10,
                 innerText: "10 sec"
@@ -249,16 +259,16 @@
             let small2 = createEl("small", {
                 innerText: 'develop by '
             });
-            
+
             let alink = createEl("a", {
                 href: 'https://github.com/siraom15/Oliv-Speed-Up',
                 target: '_blank',
                 innerText: "aommie"
             });
-            
+
             appendManyChilds(small2, alink);
 
-            appendManyChilds(div1, label1, selectMenu, br, small1, hr,small2);
+            appendManyChilds(div1, label1, selectMenu, br, small1, hr, small2);
 
             container.parentNode.insertBefore(div1, container);
 
@@ -275,13 +285,13 @@
     function toastBox(text) {
         let container = document.querySelector("div.video-info-container");
         if (container != undefined) {
-            let div = createEl("div",{
-                id : 'toastBox',
-                style : `
+            let div = createEl("div", {
+                id: 'toastBox',
+                style: `
                 color: ${colors.black};
                 color: ${colors.white};
                 left: 50%;
-                background-color: rgb(91, 144, 191);
+                background-color: ${colors.blue};
                 position: absolute;
                 top: 0;
                 padding: 2em;
@@ -290,7 +300,7 @@
                 margin-right: -50%;
                 transform: translate(-50%, -50%);
                 `,
-                innerText : text
+                innerText: text
             });
 
             container.parentNode.insertBefore(div, container);
